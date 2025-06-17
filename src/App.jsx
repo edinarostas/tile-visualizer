@@ -101,6 +101,12 @@ export default function App() {
       </header>
 
       <div className="visualizer-container">
+        <div className="tile-canvas">
+          <svg id="tile-svg" width="300" height="300"></svg>
+          <div className="tile-pattern">
+              <h3>{pattern}</h3>
+          </div>
+        </div>
         <div className="sidebar">
           <label>
             Tile Pattern:
@@ -124,15 +130,6 @@ export default function App() {
             Tile Color:
             <HexColorPicker color={color} onChange={setColor} />
           </label>
-        </div>
-
-        <div className="tile-canvas">
-          <svg id="tile-svg" width="300" height="300"></svg>
-          <div className="tile-pattern">
-            <h3>{pattern}</h3>
-            <p>{material}</p>
-            <p>Color: {color}</p>
-          </div>
         </div>
       </div>
     </div>
